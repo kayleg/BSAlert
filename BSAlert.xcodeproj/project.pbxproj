@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFB88A4615A4A21A004BC6F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB88A4515A4A21A004BC6F1 /* UIKit.framework */; };
+		AFB88A4815A4A21A004BC6F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB88A4715A4A21A004BC6F1 /* Foundation.framework */; };
+		AFB88A4A15A4A21A004BC6F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB88A4915A4A21A004BC6F1 /* CoreGraphics.framework */; };
+		AFB88A5015A4A21A004BC6F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFB88A4E15A4A21A004BC6F1 /* InfoPlist.strings */; };
+		AFB88A5215A4A21A004BC6F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB88A5115A4A21A004BC6F1 /* main.m */; };
+		AFB88A5615A4A21A004BC6F1 /* BSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB88A5515A4A21A004BC6F1 /* BSAppDelegate.m */; };
+		AFB88A5915A4A21A004BC6F1 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB88A5815A4A21A004BC6F1 /* BSViewController.m */; };
+		AFB88A5C15A4A21A004BC6F1 /* BSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB88A5A15A4A21A004BC6F1 /* BSViewController.xib */; };
+		AFB88A6415A4A21A004BC6F1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB88A6315A4A21A004BC6F1 /* SenTestingKit.framework */; };
+		AFB88A6515A4A21A004BC6F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB88A4515A4A21A004BC6F1 /* UIKit.framework */; };
+		AFB88A6615A4A21A004BC6F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB88A4715A4A21A004BC6F1 /* Foundation.framework */; };
+		AFB88A6E15A4A21A004BC6F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFB88A6C15A4A21A004BC6F1 /* InfoPlist.strings */; };
+		AFB88A7115A4A21A004BC6F1 /* BSAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB88A7015A4A21A004BC6F1 /* BSAlertTests.m */; };
+		AFB88A7C15A4A25F004BC6F1 /* BSAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB88A7B15A4A25F004BC6F1 /* BSAlert.m */; };
+		AFC5DA9015A5FBDA001574C1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5DA8F15A5FBDA001574C1 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFB88A6715A4A21A004BC6F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFB88A3815A4A21A004BC6F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AFB88A4015A4A21A004BC6F1;
+			remoteInfo = BSAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AFB88A4115A4A21A004BC6F1 /* BSAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB88A4515A4A21A004BC6F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AFB88A4715A4A21A004BC6F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AFB88A4915A4A21A004BC6F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AFB88A4D15A4A21A004BC6F1 /* BSAlert-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BSAlert-Info.plist"; sourceTree = "<group>"; };
+		AFB88A4F15A4A21A004BC6F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AFB88A5115A4A21A004BC6F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AFB88A5315A4A21A004BC6F1 /* BSAlert-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BSAlert-Prefix.pch"; sourceTree = "<group>"; };
+		AFB88A5415A4A21A004BC6F1 /* BSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSAppDelegate.h; sourceTree = "<group>"; };
+		AFB88A5515A4A21A004BC6F1 /* BSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAppDelegate.m; sourceTree = "<group>"; };
+		AFB88A5715A4A21A004BC6F1 /* BSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
+		AFB88A5815A4A21A004BC6F1 /* BSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
+		AFB88A5B15A4A21A004BC6F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BSViewController.xib; sourceTree = "<group>"; };
+		AFB88A6215A4A21A004BC6F1 /* BSAlertTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSAlertTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB88A6315A4A21A004BC6F1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		AFB88A6B15A4A21A004BC6F1 /* BSAlertTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BSAlertTests-Info.plist"; sourceTree = "<group>"; };
+		AFB88A6D15A4A21A004BC6F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AFB88A6F15A4A21A004BC6F1 /* BSAlertTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSAlertTests.h; sourceTree = "<group>"; };
+		AFB88A7015A4A21A004BC6F1 /* BSAlertTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSAlertTests.m; sourceTree = "<group>"; };
+		AFB88A7A15A4A25F004BC6F1 /* BSAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSAlert.h; sourceTree = "<group>"; };
+		AFB88A7B15A4A25F004BC6F1 /* BSAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSAlert.m; sourceTree = "<group>"; };
+		AFC5DA8F15A5FBDA001574C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFB88A3E15A4A21A004BC6F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFC5DA9015A5FBDA001574C1 /* QuartzCore.framework in Frameworks */,
+				AFB88A4615A4A21A004BC6F1 /* UIKit.framework in Frameworks */,
+				AFB88A4815A4A21A004BC6F1 /* Foundation.framework in Frameworks */,
+				AFB88A4A15A4A21A004BC6F1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB88A5E15A4A21A004BC6F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB88A6415A4A21A004BC6F1 /* SenTestingKit.framework in Frameworks */,
+				AFB88A6515A4A21A004BC6F1 /* UIKit.framework in Frameworks */,
+				AFB88A6615A4A21A004BC6F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFB88A3615A4A21A004BC6F1 = {
+			isa = PBXGroup;
+			children = (
+				AFB88A4B15A4A21A004BC6F1 /* BSAlert */,
+				AFB88A6915A4A21A004BC6F1 /* BSAlertTests */,
+				AFB88A4415A4A21A004BC6F1 /* Frameworks */,
+				AFB88A4215A4A21A004BC6F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AFB88A4215A4A21A004BC6F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFB88A4115A4A21A004BC6F1 /* BSAlert.app */,
+				AFB88A6215A4A21A004BC6F1 /* BSAlertTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFB88A4415A4A21A004BC6F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFC5DA8F15A5FBDA001574C1 /* QuartzCore.framework */,
+				AFB88A4515A4A21A004BC6F1 /* UIKit.framework */,
+				AFB88A4715A4A21A004BC6F1 /* Foundation.framework */,
+				AFB88A4915A4A21A004BC6F1 /* CoreGraphics.framework */,
+				AFB88A6315A4A21A004BC6F1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFB88A4B15A4A21A004BC6F1 /* BSAlert */ = {
+			isa = PBXGroup;
+			children = (
+				AFB88A5415A4A21A004BC6F1 /* BSAppDelegate.h */,
+				AFB88A5515A4A21A004BC6F1 /* BSAppDelegate.m */,
+				AFB88A5715A4A21A004BC6F1 /* BSViewController.h */,
+				AFB88A5815A4A21A004BC6F1 /* BSViewController.m */,
+				AFB88A5A15A4A21A004BC6F1 /* BSViewController.xib */,
+				AFB88A4C15A4A21A004BC6F1 /* Supporting Files */,
+				AFB88A7A15A4A25F004BC6F1 /* BSAlert.h */,
+				AFB88A7B15A4A25F004BC6F1 /* BSAlert.m */,
+			);
+			path = BSAlert;
+			sourceTree = "<group>";
+		};
+		AFB88A4C15A4A21A004BC6F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFB88A4D15A4A21A004BC6F1 /* BSAlert-Info.plist */,
+				AFB88A4E15A4A21A004BC6F1 /* InfoPlist.strings */,
+				AFB88A5115A4A21A004BC6F1 /* main.m */,
+				AFB88A5315A4A21A004BC6F1 /* BSAlert-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFB88A6915A4A21A004BC6F1 /* BSAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				AFB88A6F15A4A21A004BC6F1 /* BSAlertTests.h */,
+				AFB88A7015A4A21A004BC6F1 /* BSAlertTests.m */,
+				AFB88A6A15A4A21A004BC6F1 /* Supporting Files */,
+			);
+			path = BSAlertTests;
+			sourceTree = "<group>";
+		};
+		AFB88A6A15A4A21A004BC6F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AFB88A6B15A4A21A004BC6F1 /* BSAlertTests-Info.plist */,
+				AFB88A6C15A4A21A004BC6F1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFB88A4015A4A21A004BC6F1 /* BSAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB88A7415A4A21A004BC6F1 /* Build configuration list for PBXNativeTarget "BSAlert" */;
+			buildPhases = (
+				AFB88A3D15A4A21A004BC6F1 /* Sources */,
+				AFB88A3E15A4A21A004BC6F1 /* Frameworks */,
+				AFB88A3F15A4A21A004BC6F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSAlert;
+			productName = BSAlert;
+			productReference = AFB88A4115A4A21A004BC6F1 /* BSAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFB88A6115A4A21A004BC6F1 /* BSAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFB88A7715A4A21A004BC6F1 /* Build configuration list for PBXNativeTarget "BSAlertTests" */;
+			buildPhases = (
+				AFB88A5D15A4A21A004BC6F1 /* Sources */,
+				AFB88A5E15A4A21A004BC6F1 /* Frameworks */,
+				AFB88A5F15A4A21A004BC6F1 /* Resources */,
+				AFB88A6015A4A21A004BC6F1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AFB88A6815A4A21A004BC6F1 /* PBXTargetDependency */,
+			);
+			name = BSAlertTests;
+			productName = BSAlertTests;
+			productReference = AFB88A6215A4A21A004BC6F1 /* BSAlertTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFB88A3815A4A21A004BC6F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BS;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Baked Software";
+			};
+			buildConfigurationList = AFB88A3B15A4A21A004BC6F1 /* Build configuration list for PBXProject "BSAlert" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AFB88A3615A4A21A004BC6F1;
+			productRefGroup = AFB88A4215A4A21A004BC6F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFB88A4015A4A21A004BC6F1 /* BSAlert */,
+				AFB88A6115A4A21A004BC6F1 /* BSAlertTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFB88A3F15A4A21A004BC6F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB88A5015A4A21A004BC6F1 /* InfoPlist.strings in Resources */,
+				AFB88A5C15A4A21A004BC6F1 /* BSViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB88A5F15A4A21A004BC6F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB88A6E15A4A21A004BC6F1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AFB88A6015A4A21A004BC6F1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFB88A3D15A4A21A004BC6F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB88A5215A4A21A004BC6F1 /* main.m in Sources */,
+				AFB88A5615A4A21A004BC6F1 /* BSAppDelegate.m in Sources */,
+				AFB88A5915A4A21A004BC6F1 /* BSViewController.m in Sources */,
+				AFB88A7C15A4A25F004BC6F1 /* BSAlert.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB88A5D15A4A21A004BC6F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFB88A7115A4A21A004BC6F1 /* BSAlertTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AFB88A6815A4A21A004BC6F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AFB88A4015A4A21A004BC6F1 /* BSAlert */;
+			targetProxy = AFB88A6715A4A21A004BC6F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AFB88A4E15A4A21A004BC6F1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFB88A4F15A4A21A004BC6F1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AFB88A5A15A4A21A004BC6F1 /* BSViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFB88A5B15A4A21A004BC6F1 /* en */,
+			);
+			name = BSViewController.xib;
+			sourceTree = "<group>";
+		};
+		AFB88A6C15A4A21A004BC6F1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFB88A6D15A4A21A004BC6F1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFB88A7215A4A21A004BC6F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AFB88A7315A4A21A004BC6F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AFB88A7515A4A21A004BC6F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSAlert/BSAlert-Prefix.pch";
+				INFOPLIST_FILE = "BSAlert/BSAlert-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AFB88A7615A4A21A004BC6F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSAlert/BSAlert-Prefix.pch";
+				INFOPLIST_FILE = "BSAlert/BSAlert-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		AFB88A7815A4A21A004BC6F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BSAlert.app/BSAlert";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSAlert/BSAlert-Prefix.pch";
+				INFOPLIST_FILE = "BSAlertTests/BSAlertTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		AFB88A7915A4A21A004BC6F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BSAlert.app/BSAlert";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BSAlert/BSAlert-Prefix.pch";
+				INFOPLIST_FILE = "BSAlertTests/BSAlertTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFB88A3B15A4A21A004BC6F1 /* Build configuration list for PBXProject "BSAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB88A7215A4A21A004BC6F1 /* Debug */,
+				AFB88A7315A4A21A004BC6F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB88A7415A4A21A004BC6F1 /* Build configuration list for PBXNativeTarget "BSAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB88A7515A4A21A004BC6F1 /* Debug */,
+				AFB88A7615A4A21A004BC6F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFB88A7715A4A21A004BC6F1 /* Build configuration list for PBXNativeTarget "BSAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFB88A7815A4A21A004BC6F1 /* Debug */,
+				AFB88A7915A4A21A004BC6F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFB88A3815A4A21A004BC6F1 /* Project object */;
+}
