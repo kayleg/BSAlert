@@ -48,7 +48,7 @@
 
 - (void)showSuccess
 {
-    BSAlert* alert = [[BSAlert alloc] initWithStyle:BSAlertStyleSuccess andTitle:@"Everything is OOOKK"];
+    BSAlert* alert = [[BSAlert alloc] initWithStyle:BSAlertStyleSuccess | BSAlertStyleDismissOnTap andTitle:@"Everything is OOOKK"];
     [alert show];
 }
 - (void)didReceiveMemoryWarning

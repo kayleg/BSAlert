@@ -22,6 +22,7 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
 @interface BSAlert ()
 {
     UILabel *titleLabel;
+    enum BSAlertStyle _style;
 }
 
 @end
@@ -40,18 +41,16 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
         self.layer.shadowRadius = 1;
         CAGradientLayer *gradient = [CAGradientLayer layer];
         const CGFloat *cs;
-        switch (style) {
-            case BSAlertStyleInfo:
-                cs = kBSAlertInfoColor;
-                break;
-            case BSAlertStyleSuccess:
-                cs = kBSAlertSuccessColor;
-                break;
-            case BSAlertStyleWarning:
-                cs = kBSAlertWarningColor;
-            default:
-                cs = kBSAlertWarningColor;
-                break;
+        _style = style;
+        if (style & BSAlertStyleInfo)
+        {
+            cs = kBSAlertInfoColor;
+        } else if (style & BSAlertStyleSuccess)
+        {
+            cs = kBSAlertSuccessColor;
+        } else
+        {
+            cs = kBSAlertWarningColor;
         }
         
         gradient.colors = [NSArray arrayWithObjects:
@@ -90,19 +89,25 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
                          self.frame = newFrame;
                      }
                      completion:^(BOOL finished){
-                         if(finished)
+
+                         if(!(_style & BSAlertStyleDismissOnTap) && finished)
                          {
-                             [UIView animateWithDuration:0.2f
-                                                   delay:1.5f
-                                                 options:UIViewAnimationOptionCurveEaseIn
-                                              animations:^{
-                                                 CGRect newFrame = self.frame;
-                                                 newFrame.origin.y = -kBSAlertHeight;
-                                                 self.frame = newFrame;
-                                              }
-                                              completion:^(BOOL finished){ if(finished) [self removeFromSuperview];
-                                              }];
+                             [self dismiss];
                          }
+                     }];
+}
+
+- (void)dismiss
+{
+    [UIView animateWithDuration:0.2f
+                          delay:1.5f
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         CGRect newFrame = self.frame;
+                         newFrame.origin.y = -kBSAlertHeight;
+                         self.frame = newFrame;
+                     }
+                     completion:^(BOOL finished){ if(finished) [self removeFromSuperview];
                      }];
 }
 
