@@ -14,6 +14,7 @@
 - (void)showInfo;
 - (void)showWarning;
 - (void)showSuccess;
+- (void)showTappable;
 
 @end
 
@@ -29,6 +30,10 @@
     tapRecognizer.numberOfTapsRequired = 2;
     [self.view addGestureRecognizer:tapRecognizer];
     tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showSuccess)];
+    tapRecognizer.numberOfTouchesRequired = 2;
+    [self.view addGestureRecognizer:tapRecognizer];
+    tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showTappable)];
+    tapRecognizer.numberOfTapsRequired = 2;
     tapRecognizer.numberOfTouchesRequired = 2;
     [self.view addGestureRecognizer:tapRecognizer];
 }
@@ -49,6 +54,12 @@
 - (void)showSuccess
 {
     BSAlert* alert = [[BSAlert alloc] initWithStyle:BSAlertStyleSuccess | BSAlertStyleDismissOnTap andTitle:@"Everything is OOOKK"];
+    [alert show];
+}
+
+- (void)showTappable
+{
+    BSAlert *alert = [[BSAlert alloc] initWithStyle:BSAlertStyleWarning andTitle:@"Something Happened, Tap for more info" target:self action:@selector(showInfo)];
     [alert show];
 }
 - (void)didReceiveMemoryWarning

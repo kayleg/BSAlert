@@ -23,7 +23,12 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
 {
     UILabel *titleLabel;
     enum BSAlertStyle _style;
+    id _target;
+    SEL _action;
 }
+
+- (void)_onTap;
+- (void)_dismissWithDelay:(NSTimeInterval)delay;
 
 @end
 
@@ -53,6 +58,11 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
             cs = kBSAlertWarningColor;
         }
         
+        if (style & BSAlertStyleDismissOnTap) {
+            UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_onTap)];
+            [self addGestureRecognizer:tapRecognizer];
+        }
+        
         gradient.colors = [NSArray arrayWithObjects:
                            (id)[[UIColor colorWithRed:cs[0] green:cs[1] blue:cs[2] alpha:1] CGColor],
                            (id)[[UIColor colorWithRed:0.7f*cs[0]
@@ -67,12 +77,29 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
         gradient.frame = self.bounds;
         gradient.cornerRadius = kBSAlertCornerRadius;
         [self.layer insertSublayer:gradient atIndex:0];
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, kBSAlertWidth, kBSAlertHeight)];
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kBSAlertWidth - 20, kBSAlertHeight)];
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.text = title;
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.textColor = [UIColor whiteColor];
+        titleLabel.adjustsFontSizeToFitWidth = YES;
         [self addSubview:titleLabel];
+    }
+    
+    return self;
+}
+
+- (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString *)title target:(id)target action:(SEL)action
+{
+    
+    style |= BSAlertStyleDismissOnTap;
+    self = [self initWithStyle:style andTitle:title];
+    
+    if (self) {
+        _target = target;
+        _action = action;
+        
+
     }
     
     return self;
@@ -92,32 +119,40 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
 
                          if(!(_style & BSAlertStyleDismissOnTap) && finished)
                          {
-                             [self dismiss];
+                             [self _dismissWithDelay:1.5];
                          }
                      }];
 }
 
 - (void)dismiss
 {
+    [self _dismissWithDelay:0];
+}
+
+#pragma mark - BSAlert Private Methods
+
+- (void)_onTap
+{
+    [self _dismissWithDelay:0];
+}
+
+- (void)_dismissWithDelay:(NSTimeInterval)delay
+{
     [UIView animateWithDuration:0.2f
-                          delay:1.5f
+                          delay:delay
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          CGRect newFrame = self.frame;
                          newFrame.origin.y = -kBSAlertHeight;
                          self.frame = newFrame;
                      }
-                     completion:^(BOOL finished){ if(finished) [self removeFromSuperview];
-                     }];
-}
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+                     completion:^(BOOL finished){
+                         if(finished){
+                             if (_target && _action) {
+                                 [_target performSelector:_action];
+                             }
+                             [self removeFromSuperview];
+                         }
+                     }];}
 
 @end

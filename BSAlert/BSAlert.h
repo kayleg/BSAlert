@@ -18,6 +18,7 @@ enum BSAlertStyle {
 @interface BSAlert : UIView 
 
 - (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString*)title;
+- (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString *)title target:(id)target action:(SEL)action;
 - (void)show;
 - (void)dismiss;
 
