@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 
 enum BSAlertStyle {
-    BSAlertStyleInfo = 1,
-    BSAlertStyleWarning = 1 << 1,
-    BSAlertStyleSuccess = 1 << 2,
-    BSAlertStyleDismissOnTap = 1 << 3
+    BSAlertStyleInfo            = 1 << 0,
+    BSAlertStyleWarning         = 1 << 1,
+    BSAlertStyleSuccess         = 1 << 2,
+    BSAlertStyleError           = 1 << 3,
+    BSAlertStyleDismissOnTap    = 1 << 4
     };
 
 @interface BSAlert : UIView 

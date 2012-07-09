@@ -13,9 +13,10 @@ static const float kBSAlertWidth = 280.0f;
 static const float kBSAlertCornerRadius = 8.0f;
 static NSString *kBSAlertShowContext = @"bsalertshow";
 
-static const float kBSAlertWarningColor[4] = { 0.95f, 0.302f, 0.294f, 1.0f };
+static const float kBSAlertErrorColor[4] = { 0.95f, 0.302f, 0.294f, 1.0f };
 static const float kBSAlertInfoColor[4] = { 0.3f, 0.48f, 0.95f, 1.0f };
 static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
+static const float kBSAlertWarningColor[4] = { 1.0f, 0.91f, 0.35f, 1.0f };
 
 #import <QuartzCore/QuartzCore.h>
 
@@ -47,15 +48,23 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
         CAGradientLayer *gradient = [CAGradientLayer layer];
         const CGFloat *cs;
         _style = style;
+        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kBSAlertWidth - 20, kBSAlertHeight)];
         if (style & BSAlertStyleInfo)
         {
             cs = kBSAlertInfoColor;
+            titleLabel.textColor = [UIColor whiteColor];
         } else if (style & BSAlertStyleSuccess)
         {
             cs = kBSAlertSuccessColor;
-        } else
+            titleLabel.textColor = [UIColor darkTextColor];
+        } else if (style & BSAlertStyleError)
+        {
+            cs = kBSAlertErrorColor;
+            titleLabel.textColor = [UIColor whiteColor];
+        }else
         {
             cs = kBSAlertWarningColor;
+            titleLabel.textColor = [UIColor darkTextColor];
         }
         
         if (style & BSAlertStyleDismissOnTap) {
@@ -77,11 +86,11 @@ static const float kBSAlertSuccessColor[4] = { 0.514f, 0.91f, 0.5, 1.0f };
         gradient.frame = self.bounds;
         gradient.cornerRadius = kBSAlertCornerRadius;
         [self.layer insertSublayer:gradient atIndex:0];
-        titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, kBSAlertWidth - 20, kBSAlertHeight)];
+
         titleLabel.textAlignment = NSTextAlignmentCenter;
         titleLabel.text = title;
         titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.textColor = [UIColor whiteColor];
+        
         titleLabel.adjustsFontSizeToFitWidth = YES;
         [self addSubview:titleLabel];
     }
