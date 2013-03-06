@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^BSAlertBlock)();
+
 enum BSAlertStyle {
     BSAlertStyleInfo            = 1 << 0,
     BSAlertStyleWarning         = 1 << 1,
@@ -20,6 +22,7 @@ enum BSAlertStyle {
 
 - (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString*)title;
 - (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString *)title target:(id)target action:(SEL)action;
+- (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString*)title onTap:(BSAlertBlock)handler;
 - (void)show;
 - (void)dismiss;
 

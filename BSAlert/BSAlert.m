@@ -26,6 +26,7 @@ static const float kBSAlertWarningColor[4] = { 1.0f, 0.91f, 0.35f, 1.0f };
     enum BSAlertStyle _style;
     id _target;
     SEL _action;
+    BSAlertBlock _hanlder;
 }
 
 - (void)_onTap;
@@ -107,8 +108,17 @@ static const float kBSAlertWarningColor[4] = { 1.0f, 0.91f, 0.35f, 1.0f };
     if (self) {
         _target = target;
         _action = action;
-        
+    }
+    
+    return self;
+}
 
+- (id)initWithStyle:(enum BSAlertStyle)style andTitle:(NSString *)title onTap:(BSAlertBlock)handler
+{
+    self = [self initWithStyle:style andTitle:title];
+    
+    if (self) {
+        _hanlder = handler;
     }
     
     return self;
@@ -159,6 +169,8 @@ static const float kBSAlertWarningColor[4] = { 1.0f, 0.91f, 0.35f, 1.0f };
                          if(finished){
                              if (_target && _action) {
                                  [_target performSelector:_action];
+                             } else if (_hanlder) {
+                                 _hanlder();
                              }
                              [self removeFromSuperview];
                          }
